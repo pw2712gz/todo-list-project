@@ -24,18 +24,19 @@ export default class ListTemplate implements DOMList {
 
     fullList.list.forEach(item => {
       const li = document.createElement("li") as HTMLLIElement;
-      li.className = "item";
+      li.className = "item list-group-item d-flex justify-content-between align-items-center";
 
       const check = document.createElement("input") as HTMLInputElement;
       check.type = "checkbox";
       check.id = item.id;
       check.checked = item.checked;
+      check.className = "mr-2";
       check.setAttribute("aria-label", `Mark ${item.item} as ${item.checked ? 'incomplete' : 'complete'}`);
       li.append(check);
 
       check.addEventListener('change', () => {
         item.checked = !item.checked;
-        fullList.save();
+        FullList.instance.save();
       });
 
       const label = document.createElement("label") as HTMLLabelElement;
@@ -43,14 +44,29 @@ export default class ListTemplate implements DOMList {
       label.textContent = item.item;
       li.append(label);
 
-      const button = document.createElement("button") as HTMLButtonElement;
-      button.className = 'button';
-      button.textContent = 'X';
-      button.setAttribute("aria-label", `Remove ${item.item}`);
-      li.append(button);
+      const editButton = document.createElement("button") as HTMLButtonElement;
+      editButton.className = 'btn btn-secondary btn-sm ml-2';
+      editButton.textContent = 'Edit';
+      editButton.setAttribute("aria-label", `Edit ${item.item}`);
+      li.append(editButton);
 
-      button.addEventListener('click', () => {
-        fullList.removeItem(item.id);
+      editButton.addEventListener('click', () => {
+        const newItemText = prompt("Edit item:", item.item);
+        if (newItemText !== null && newItemText.trim() !== "") {
+          item.item = newItemText.trim();
+          FullList.instance.save();
+          this.render(fullList);
+        }
+      });
+
+      const deleteButton = document.createElement("button") as HTMLButtonElement;
+      deleteButton.className = 'btn btn-danger btn-sm ml-2';
+      deleteButton.textContent = 'Delete';
+      deleteButton.setAttribute("aria-label", `Remove ${item.item}`);
+      li.append(deleteButton);
+
+      deleteButton.addEventListener('click', () => {
+        FullList.instance.removeItem(item.id);
         this.render(fullList);
       });
 

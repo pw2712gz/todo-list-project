@@ -15,7 +15,6 @@ const initApp = (): void => {
   itemEntryForm.addEventListener("submit", (event: SubmitEvent): void => {
     event.preventDefault();
     const newEntryText: string = input.value.trim();
-    console.log("New entry text:", newEntryText);  // Log the input value
     if (!newEntryText) return;
 
     const itemId: number = fullList.list.length ? parseInt(fullList.list[fullList.list.length - 1].id) + 1 : 1;
