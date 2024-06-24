@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My List</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/src/css/style.css">
-  <script type="module" src="/src/main.ts"></script>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>My List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
+    <script src="/src/main.ts" type="module"></script>
 </head>
+
+
 <body class="bg-dark text-light">
-  <div class="container mt-5">
+<div class="container mt-5">
     <main class="bg-secondary p-4 rounded shadow">
-      <h1 class="offscreen">My List</h1>
-      <section class="newItemEntry">
-        <h2 class="offscreen">New Item Entry</h2>
-        <form class="newItemEntry__form form-inline" id="itemEntryForm">
-          <label for="newItem" class="offscreen">Enter a new to do item</label>
-          <input class="form-control mr-2" id="newItem" type="text" maxlength="40" autocomplete="off" placeholder="Add item" />
-          <button id="addItem" class="btn btn-primary" title="Add new item" aria-label="Add new item to list">+</button>
-        </form>
-      </section>
-      <section class="listContainer mt-4">
-        <header class="listTitle d-flex justify-content-between align-items-center">
-          <h2 id="listName">List</h2>
-          <button id="clearItemsButton" class="btn btn-danger" title="Clear the list" aria-label="Remove all items from the list">Clear</button>
-        </header>
-        <hr />
-        <ul id="listItems" class="list-group"></ul>
-      </section>
+        <h1 class="offscreen">My List</h1>
+        <section class="newItemEntry">
+            <h2 class="offscreen">New Item Entry</h2>
+            <form class="newItemEntry__form form-inline" id="itemEntryForm">
+                <label class="offscreen" for="newItem">Enter a new to do item</label>
+                <input autocomplete="off" class="form-control mr-2" id="newItem" maxlength="40" placeholder="Add item"
+                       type="text"/>
+                <button aria-label="Add new item to list" class="btn btn-primary" id="addItem" title="Add new item">+
+                </button>
+            </form>
+        </section>
+        <section class="listContainer mt-4">
+            <header class="listTitle d-flex justify-content-between align-items-center">
+                <h2 id="listName">List</h2>
+                <button aria-label="Remove all items from the list" class="btn btn-danger" id="clearItemsButton"
+                        title="Clear the list">Clear
+                </button>
+            </header>
+            <hr/>
+            <ul class="list-group" id="listItems"></ul>
+        </section>
     </main>
-  </div>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

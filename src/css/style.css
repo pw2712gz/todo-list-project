@@ -1,108 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .offscreen {
-  position: absolute;
-  left: -10000px;
+    position: absolute;
+    left: -10000px;
 }
 
 html, body {
-  font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
-  background-color: #333;
-  color: #fff;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-color: #333;
+    color: #fff;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-  max-width: 500px;
-  width: 100%;
+    max-width: 500px;
+    width: 100%;
 }
 
 .main {
-  background-color: #444;
-  border: 1px solid #555;
-  border-radius: 8px;
-  padding: 1rem;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 1rem;
 }
 
 .form-inline {
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .form-control {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .newItemEntry__form {
-  gap: 0.5rem;
+    gap: 0.5rem;
 }
 
 .list-group-item {
-  background-color: #555;
-  border: 1px solid #666;
-  color: #fff;
+    background-color: #555;
+    border: 1px solid #666;
+    color: #fff;
 }
 
 .item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .item > label {
-  flex-grow: 1;
-  margin: 0 0.5rem;
-  word-break: break-all;
+    flex-grow: 1;
+    margin: 0 0.5rem;
+    word-break: break-all;
 }
 
 .item > button {
-  margin-left: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 .item > button:hover {
-  color: red;
+    color: red;
 }
 
 .item > input[type="checkbox"] {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .item > input[type="checkbox"]:checked + label {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 .newItemEntry__input {
-  border: 2px solid #666;
-  background-color: #444;
-  color: #fff;
+    border: 2px solid #666;
+    background-color: #444;
+    color: #fff;
 }
 
 .btn-primary {
-  background-color: #0069d9;
-  border-color: #0056b3;
+    background-color: #0069d9;
+    border-color: #0056b3;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 .btn-danger {
-  background-color: #dc3545;
-  border-color: #b02a37;
+    background-color: #dc3545;
+    border-color: #b02a37;
 }
 
 .btn-danger:hover {
-  background-color: #b02a37;
+    background-color: #b02a37;
 }
