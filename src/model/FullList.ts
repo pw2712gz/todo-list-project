@@ -11,7 +11,7 @@ interface List {
 
     addItem(itemObj: ListItem): void;
 
-    removeItem(id: string): void;
+    removeItem(id: string) : void;
 }
 
 export default class FullList implements List {

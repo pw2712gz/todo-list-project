@@ -6,6 +6,8 @@ interface DOMList {
     clear(): void;
 
     render(fullList: FullList): void;
+
+    
 }
 
 export default class ListTemplate implements DOMList {

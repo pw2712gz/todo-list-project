@@ -1,0 +1,6 @@
+{
+  "codium.codeCompletion.enable": true,
+  "CodeGPT.apiKey": "OpenAI",
+  "CodeGPT.Autocomplete.enabled": true,
+  "CodeGPT.Autocomplete.maxTokens": 488
+}
