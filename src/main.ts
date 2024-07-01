@@ -8,6 +8,7 @@ const initApp = (): void => {
     const fullList = FullList.instance;
     const template = ListTemplate.instance;
 
+
     // Add listener to new entry form submit
     const itemEntryForm = document.getElementById("itemEntryForm") as HTMLFormElement;
     const input = document.getElementById("newItem") as HTMLInputElement;
@@ -34,7 +35,9 @@ const initApp = (): void => {
     });
 
     fullList.load();
+
     template.render(fullList);
+
 };
 
 document.addEventListener("DOMContentLoaded", initApp);
